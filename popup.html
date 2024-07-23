@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pomodoro Timer</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <input type="text" class="app-header" value="Pomodoro" />
+        <div class="clocks">
+          <ul class="clock-list">
+            <li class="activeLi" data-tab-target="#pomodoro">pomodoro</li>
+            <li data-tab-target="#short">break</li>
+          </ul>
+        </div>
+        <div class="clocks-container">
+          <div id="pomodoro" data-tab-content>
+            <span class="time-left">
+              <span id="pomodoro-minutes">00</span>
+              :
+              <span id="pomodoro-seconds">00</span>
+            </span>
+            <button class="button" id="pomodoro-playPause">play</button>
+          </div>
+          <div id="short" data-tab-content>
+            <span class="time-left">
+              <span id="break-minutes">00</span>
+              :
+              <span id="break-seconds">00</span>
+            </span>
+            <button class="button" id="break-playPause">play</button>
+          </div>
+        </div>
+        <div class="settings">
+          <i class="fas fa-cog"></i>
+        </div>
+      </div>
+      
+      <div id="task-app">
+          <form action="">
+      
+            <input type="text" placeholder="New Task" class="task-input" id="" autocomplete />
+            <button type="submit" class="task-btn">
+              <i class="fas fa-plus-square"></i>
+            </button>
+          </form>
+      
+          <div class="task-container">
+            <ul class="task-list"></ul>
+          </div>
+      
+          <div id="advanced">
+            <button type="submit" class="clr-task">Clear items</button>
+          </div>
+        </div>
+      
+      <ul id="notif-container"></ul>
+      
+      <form class="modal">
+        <div class="settings-panel">
+          <header class="panel-header">
+            <h1>Settings</h1>
+                <i style="color: black;" class="fas fa-times close-btn"></i>
+          </header>
+          <div class="flexbox">
+            <section class="row timer-settings" style="flex-direction: column; align-items: flex-start;">
+              <label for="timer-inputs">time (minutes)</label>
+              <div id="timer-inputs">
+                <div style="flex: 0 0 auto;display: flex; flex-direction: column;">
+                  <label for="timer">Pomodoro</label>
+                  <input type="number" min="0" id="timer"/>
+                </div>
+                <div style="flex: 0 0 auto;display: flex; flex-direction: column;">
+                  <label for="break">Break</label>
+                  <input type="number" min="0" id="break"/>
+                </div>
+              </div>
+            </section>
+            <section class="row font-settings">
+              <label for="fonts">font</label>
+              <div id="fonts"></div>
+            </section>
+            <section class="row color-settings">
+              <label for="colors">color</label>
+              <div id="colors">
+                <div class="color"></div>
+                <div class="color"></div>
+                <div class="color"></div>
+              </div>
+            </section>
+          </div>
+          <button type="submit" class="apply-settings" id="applySettings">Apply</button>
+        </div>
+      </form>
+  <script src="popup.js"></script>
+</body>
+</html>

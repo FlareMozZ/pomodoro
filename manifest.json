@@ -1,0 +1,11 @@
+{
+    "manifest_version": 3,
+    "name": "Pomodoro Timer",
+    "version": "1.0",
+    "description": "A Pomodoro timer with a built-in to-do list to help eliminate distractions.",
+    "permissions": ["storage", "activeTab"],
+    "action": {
+      "default_popup": "popup.html"
+    }
+  }
+  
